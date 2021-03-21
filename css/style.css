@@ -1,0 +1,32 @@
+body {
+
+background-image: url(../images/coc.jpg);
+
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    display: inline-block;
+    justify-content: flex-end;
+    padding: 7px;
+    margin: 6px 16px;
+    background-color:#b0d1c2;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+ h1 { 
+     text-align: center;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: 2px;
+ }
+
+div ,img{
+
+    width: 50%;
+    text-align: center;
+}
+
