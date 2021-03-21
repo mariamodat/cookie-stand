@@ -30,3 +30,17 @@ div ,img{
     text-align: center;
 }
 
+
+.button {
+    margin: 20px 0px 400px 6px;
+    padding: 20px;
+    background-color: #edc4b3;
+    border: dotted black;
+    border-radius: 50px;
+    width: 100px;
+}
+.button :hover {
+    background-color: #98c1d9;
+    color: #a4161a;
+
+}
