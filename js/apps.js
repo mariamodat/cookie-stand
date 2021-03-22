@@ -271,4 +271,4 @@ const lima = {
 
 
 lima.getCustomer(23,65);
-limas.render();
+lima.render();
