@@ -57,7 +57,7 @@ Locations.prototype.getCustomer = function (min , max)
 
 
 
-Locations.prototype.totalCus = function (){ for (let i=0 ; i<this.hourSales.length;i++)
+Locations.prototype.totalCus = function (){ for (let i=0 ; i<hourSales.length;i++)
 {
   this.total += this.getCustomer(this.minCus,this.maxCus);
   return this.total ;
@@ -140,12 +140,14 @@ Locations.prototype.render= function (){
   //   trEl.appendChild(td2El);
   //   td1El.textContent=(this.name);
 
+
   const trElem2= document.createElement('tr');
   x.appendChild(trElem2);
+  trElem2.textContent=(this.name);
 
-  const n = document.createElement('tr');
-  x.appendChild(n);
-  n.textContent=(this.name);
+  // const n = document.createElement('tr');
+  // x.appendChild(n);
+  // n.textContent=(this.name);
 
   for (let i=0 ;i<hourSales.length ;i++)
   {
@@ -158,14 +160,18 @@ Locations.prototype.render= function (){
 
   }
 
+  const totalElem = document.createElement('tr');
+  trElem2.appendChild(totalElem);
+  totalElem.textContent=('Total' );
 
+  const totalCustomers = document.createElement('td');
+  totalElem.appendChild(totalCustomers);
+  totalCustomers.textContent=(this.totalCus());
 
 
 };
 
 
-const seattle = new Locations ('Sattele', 6.3,23,65 );
-seattle.getCustomer(2,25);
 
 let x = document.createElement('table');
 document.body.appendChild(x);
@@ -177,9 +183,13 @@ captionEl.textContent=('Salmon Cookies Hourly Sales');
 
 
 
+const tr1Elem = document.createElement('tr');
+x.appendChild(tr1Elem);
+tr1Elem.textContent=('  ');
+
+
 const trElem = document.createElement('tr');
 x.appendChild(trElem);
-
 
 
 
@@ -190,4 +200,10 @@ hourSales.forEach(hour => {
 
 
 
+const seattle = new Locations ('Sattele', 6.3,23,65 );
+seattle.getCustomer(2,25);
+const tokyo = new Locations('tokyo',3,24,1.2);
+
+
 seattle.render();
+tokyo.render();
