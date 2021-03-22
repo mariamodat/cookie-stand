@@ -70,6 +70,19 @@ const tokyo = {
     this.customer=Math.ceil( this.AvgCookiesSale * getRandomInt(min,max));
     return this.customer;
   } ,
+  totalCookies :0 ,
+  totallyCustomers : function(){
+    for (let i=0 ; i<this.hoursSales.length ;i++)
+    {
+
+
+      this.totalCookies += this.getCustomer(this.minCustomer,this.maxCustomer);
+
+      return this.totalCookies;
+    }
+
+  } ,
+
 
   render : function(){
 
@@ -90,6 +103,9 @@ const tokyo = {
       liElem.textContent=(` ${hour}  :   ${this.getCustomer(this.minCustomer,this.maxCustomer)} customer. ` );
     }) ;
 
+    const total = document.createElement('p');
+    title.appendChild(total);
+    total.textContent=(this.totallyCustomers());
   }
 
 
@@ -101,7 +117,7 @@ const tokyo = {
 
 
 
-tokyo.getCustomer(23,65);
+tokyo.getCustomer(3,24);
 tokyo.render();
 
 
