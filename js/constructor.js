@@ -212,7 +212,7 @@ seattle.getCustomer(2,25);
 const tokyo = new Locations('Tokyo',3,24,1.2);
 const dubai = new Locations('Dubai', 11,38,3.7);
 const paris = new Locations('Paris', 20,38,2.3);
-const lima = new Locations( 'lime' , 2,16,4.6);
+const lima = new Locations( 'Lime' , 2,16,4.6);
 
 seattle.render();
 tokyo.render();
