@@ -27,14 +27,6 @@ function Locations (name ,avgCookies,minCus,maxCus ){
   this.customer = 0 ;
   this.total= 0;
   this.ta = '';
-  // this.getCustomer = function (min , max)
-  // {
-  //   this.customer=Math.ceil(this.avgCookies*getRandomInt(min ,max));
-  //   return this.customer ;
-
-  // };
-
-
 
   allObjects.push(this);
 
@@ -55,93 +47,8 @@ Locations.prototype.getCustomer = function (min , max)
 
 
 
-
-
-// Locations.prototype.totalCus = function (){ for (let i=0 ; i<hourSales.length;i++)
-// {
-//   this.total += this.getCustomer(this.minCus,this.maxCus);
-//   return this.total ;
-
-// }
-// };
-
-
-
-
-
-
-
-// Locations.prototype.tableUpload = function()
-// {
-//   for( let i=0 ; i<7;i++)
-//   {
-//     this.ta += '<tr>';
-
-//     for(let c= 0 ; c <this.hourSales.length;c++)
-//     {
-
-//       this.ta += '<td>' + this.hourSales[c] + '</td>';
-
-
-//     }
-//     this.ta += '</tr>';
-
-
-
-
-
-//   }
-//   document.write( `</table> ${this.ta} </table>`);
-
-
-
-
-// };
-
-
-
-
-
-
-
-
-
 Locations.prototype.render= function (){
-  //   const table = document.createElement('div');
-  //   document.body.appendChild(table);
 
-
-  //   // const h1El = document.createElement('h1');
-  //   // title.appendChild(h1El);
-  //   // h1El.textContent=(this.name);
-
-
-  //   const captionEl = document.createElement('caption');
-  //   table.appendChild(captionEl);
-  //   captionEl.textContent=('Salmon Cookies Hourly Sales');
-
-
-  //   const trEl = document.createElement('tr');
-  //   captionEl.appendChild(trEl);
-
-  //   const td1El = document.createElement('td');
-  //   trEl.appendChild(td1El);
-  //   td1El.textContent=('hour');
-
-  //   this.hourSales.forEach(hour => {
-  //     const tdEl = document.createElement('td');
-  //     trEl.appendChild(tdEl);
-  //     trEl.textContent=(this.hourSales[hour]);
-
-  //   });
-
-  //   const tr2El = document.createElement('tr');
-  //   captionEl.appendChild(tr2El);
-
-
-  //   const td2El = document.createElement('td');
-  //   trEl.appendChild(td2El);
-  //   td1El.textContent=(this.name);
 
 
   const trElem2= document.createElement('tr');
@@ -187,13 +94,12 @@ captionEl.textContent=('Salmon Cookies Hourly Sales');
 
 const tr1Elem = document.createElement('tr');
 x.appendChild(tr1Elem);
+
+
 const thElem = document.createElement('th');
 tr1Elem.appendChild(thElem);
 thElem.textContent=('  ');
 
-
-// const trElem = document.createElement('tr');
-// x.appendChild(trElem);
 
 
 
