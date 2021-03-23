@@ -33,7 +33,6 @@ function Locations (name ,avgCookies,minCus,maxCus ){
 
 
 
-
 Locations.prototype.getCustomer = function (min , max)
 {
   this.customer=Math.ceil(this.avgCookies*getRandomInt(min ,max));
@@ -53,9 +52,7 @@ Locations.prototype.render= function (){
   trElem2.appendChild(th4Elem);
   th4Elem.textContent=(this.name);
 
-  // const n = document.createElement('tr');
-  // x.appendChild(n);
-  // n.textContent=(this.name);
+
 
   for (let i=0 ;i<hourSales.length ;i++)
   {
@@ -97,8 +94,6 @@ tr1Elem.appendChild(thElem);
 thElem.textContent=('  ');
 
 
-
-
 hourSales.forEach(hour => {
   const td1El = document.createElement('td');
   tr1Elem.appendChild(td1El);
@@ -107,6 +102,8 @@ hourSales.forEach(hour => {
 const th2Elem = document.createElement('th');
 tr1Elem.appendChild(th2Elem);
 th2Elem.textContent=('daily location total');
+
+
 
 
 const seattle = new Locations ('Sattele', 6.3,23,65 );
@@ -121,3 +118,7 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+const trrElem =document.createElement('tr');
+x.appendChild(trrElem);
+trrElem.textContent=('totals');
+
