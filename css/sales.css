@@ -1,4 +1,4 @@
-div {
+#sales {
     font-family: 'Abril Fatface', cursive;
     font-family: 'Caveat', cursive;
     font-size: larger; 
@@ -6,10 +6,52 @@ div {
     width: 400px;   
 
 }
+header h1 {
+  text-align: center;
+  font-family: 'Caveat', cursive;
+ font-weight: bolder;
+ padding: 50px;
+ background-color: #ffa69e;
+ border-radius: 50px;
+}
+
+
+nav ul li  {
+  display: inline-block;
+  margin: 20px 60px;
+  padding: 15px;
+  width: 80px;
+  background-color: #588157;
+  color: white;
+  border-radius: 50px;
+
+}
+
+
+
+
+
+
+
+
+
 
     table , td, th {
         border: 1px solid black;
-      }
+              }
       table {
+        margin-top: 100 px;
         border-collapse: collapse;
+      }
+
+
+      div ul {
+        float: left;
+
+      }
+
+
+      img{
+size: 50%;
+
       }
