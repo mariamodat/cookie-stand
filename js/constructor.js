@@ -1,10 +1,17 @@
 'use strict';
 
-let arr= [];
+let footerArr = [];
+let resultArr = [];
 
+for (let i=0;i<14;i++)
+{
+  footerArr.push(0);
+
+}
+console.log(footerArr);
 
 const hourSales = ['6am', '7am' , '8am','9am', '10am', '11 am', '12 pm ' , '1 pm ', '2 pm ' , '3pm ','4pm', '5pm', '6pm','7pm'];
-let result =0 ;
+
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -45,7 +52,8 @@ Locations.prototype.getCustomer = function (min , max)
 Locations.prototype.render= function (){
 
 
-
+  let result =0;
+  let arr= [];
   const trElem2= document.createElement('tr');
   x.appendChild(trElem2);
   const th4Elem = document.createElement('th');
@@ -59,9 +67,12 @@ Locations.prototype.render= function (){
 
     const td3El = document.createElement('td');
     trElem2.appendChild(td3El);
-    td3El.textContent=(seattle.getCustomer(23,65));
+    let random = this.getCustomer(this.minCus,this.maxCus);
+    td3El.textContent= random;
+    footerArr[i]+=random;
     arr.push(Number( td3El.textContent));
     result=result+arr[i];
+    resultArr.push(result);
 
 
   }
@@ -107,10 +118,9 @@ th2Elem.textContent=('daily location total');
 
 
 const seattle = new Locations ('Sattele', 6.3,23,65 );
-seattle.getCustomer(2,25);
 const tokyo = new Locations('Tokyo',3,24,1.2);
 const dubai = new Locations('Dubai', 11,38,3.7);
-const paris = new Locations('Paris', 20,38,2.3);
+const paris = new Locations('Paris',20,38,2.3);
 const lima = new Locations( 'Lime' , 2,16,4.6);
 
 seattle.render();
@@ -121,4 +131,37 @@ lima.render();
 const trrElem =document.createElement('tr');
 x.appendChild(trrElem);
 trrElem.textContent=('totals');
+// console.log(footerArr);
+pushing();
+function pushing (){
+  for (let y=0;y<footerArr.length;y++)
+  {
+    const lastRow =document.createElement('th');
+    trrElem.append(lastRow);
+    lastRow.textContent=(footerArr[y]);
+
+
+  }
+  let lastCol = document.createElement('th');
+  trrElem.append(lastCol);
+  for (let z=0;z<allObjects.length;z++)
+    lastCol.textContent=(resultArr[z] );
+}
+
+let salmonForm = document.getElementById('salmonForm');
+salmonForm.addEventListener('submit' , addNewLocation);
+
+function addNewLocation(event) {
+  event.preventDefault();
+  let name = event.target.name.value;
+  console.log(name);
+  let avg = event.target.avg.value;
+  let min = event.target.min.value;
+  let max = event.target.max.value;
+
+
+  let login = new Locations (name,avg,min,max);
+  login.getCustomer(min,max);
+  login.render();
+}
 

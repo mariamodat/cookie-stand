@@ -48,3 +48,15 @@ nav ul li  {
     background-color: cadetblue;
     color: #ffcad4;
     }
+    fieldset {
+      width: 500px;
+      margin-bottom: 60px;
+      background-color: #fec5bb;
+    }
+     
+    #submit {
+      text-align: center;
+      margin-left: 160px;
+      margin-top: 30px;
+    }
+   
