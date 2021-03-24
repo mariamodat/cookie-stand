@@ -6,14 +6,7 @@
     width: 400px;   
 
 }
-header h1 {
-  text-align: center;
-  font-family: 'Caveat', cursive;
- font-weight: bolder;
- padding: 50px;
- background-color: #ffa69e;
- border-radius: 50px;
-}
+
 
 
 nav ul li  {
@@ -29,13 +22,6 @@ nav ul li  {
 
 
 
-
-
-
-
-
-
-
     table , td, th {
         border: 1px solid black;
               }
@@ -44,14 +30,21 @@ nav ul li  {
         border-collapse: collapse;
       }
 
+      input , label  {
 
-      div ul {
-        float: left;
+        font-family: 'Lobster Two', cursive;
+        letter-spacing: 2px;
+    }
+    legend {
+      font-family: 'Poiret One', cursive;
+      font-weight: bolder;
+      text-shadow: brown;
 
-      }
+    }
+     
 
 
-      img{
-size: 50%;
-
-      }
+    input :focus {
+    background-color: cadetblue;
+    color: #ffcad4;
+    }

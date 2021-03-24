@@ -32,7 +32,7 @@ div ,img{
 
 
 .button {
-    margin: 20px 0px 400px 6px;
+    margin: 20px 0px 60px 6px;
     padding: 20px;
     background-color: #edc4b3;
     border: dotted black;
@@ -43,4 +43,11 @@ div ,img{
     background-color: #98c1d9;
     color: #a4161a;
 
+}
+
+.links {
+    display: inline-block;
+}
+article h1 {
+    text-align: left;
 }
