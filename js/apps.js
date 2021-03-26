@@ -223,11 +223,6 @@ paris.render();
 
 
 
-
-
-
-
-
 const lima = {
   name : 'Lima',
   hoursSales : ['6am', '7am' , '8am','9am', '10am', '11 am', '12 pm ' , '1 pm ', '2 pm ' , '3pm ','4pm', '5pm', '6pm','7pm'],

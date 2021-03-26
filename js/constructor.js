@@ -118,10 +118,10 @@ th2Elem.textContent=('daily location total');
 
 
 const seattle = new Locations ('Sattele', 6.3,23,65 );
-const tokyo = new Locations('Tokyo',3,24,1.2);
-const dubai = new Locations('Dubai', 11,38,3.7);
-const paris = new Locations('Paris',20,38,2.3);
-const lima = new Locations( 'Lime' , 2,16,4.6);
+const tokyo = new Locations('Tokyo',1.2,3,34);
+const dubai = new Locations('Dubai', 3.7,11,38);
+const paris = new Locations('Paris',2.3,20,38);
+const lima = new Locations( 'Lime' , 4.6,2,16);
 
 seattle.render();
 tokyo.render();
